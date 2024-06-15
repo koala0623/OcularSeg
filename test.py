@@ -120,23 +120,7 @@ if __name__ == "__main__":
                 'label_path': '/sdata/yixin.zhang/program/dataset/SBVPI/test/label/',
                 'img_size': [160,288],
                 'z_spacing': 1
-                },
-    'MMU' : {'volume_path': '/sdata/yixin.zhang/program/dataset/MMU/test/image/',
-                'label_path': '/sdata/yixin.zhang/program/dataset/MMU/test/label/',
-                'img_size': [160,288],
-                'z_spacing': 1
-                },  
-
-    'Miche' : {'volume_path': '/sdata/yixin.zhang/program/dataset/Miche/test/image/',
-                'label_path': '/sdata/yixin.zhang/program/dataset/Miche/test/label/',
-                'img_size': [192,256],
-                'z_spacing': 1
-                },
-    'I-SOCIAL-DB' : {'volume_path': '/sdata/yixin.zhang/program/dataset/I-SOCIAL-DB/test/image/',
-                        'label_path': '/sdata/yixin.zhang/program/dataset/I-SOCIAL-DB/test/label/',
-                        'img_size': [192,256],
-                        'z_spacing': 1
-                        },
+                }
                     }
 
 
@@ -159,34 +143,7 @@ if __name__ == "__main__":
     snapshot_path = snapshot_path + '_' + str(args.img_size)
     snapshot_path = snapshot_path + '_s' + str(args.seed) if args.seed!=1234 else snapshot_path
 
-
-
-
-    # net =  UNet().cuda()
-    # net = UNet2Plus().cuda()
-    # net =  UNet3Plus().cuda()
-    # net =  PSPDenseNet().cuda()
-    # net = DeepLab().cuda()
-    # net = DeepLab_I().cuda()
-    # net = SegNet(3,4).cuda()
-    # net = UperNet().cuda()
-    # net = HighResolutionNet(config).cuda()
-    # net = UHRnet().cuda()
     net = M2SNet().cuda()
-    # net = TransFuse_S(pretrained=True).cuda()
-    # net = EUNet(3, 4).cuda()
-    # net = EyeSeg().cuda()
-
-
-    # config_vit = CONFIGS_ViT_seg[args.vit_name]
-    # config_vit.n_classes = args.num_classes
-    # config_vit.n_skip = 3
-    # config_vit.patches.size = (16, 16)
-    # if args.vit_name.find('R50') !=-1:
-    #     config_vit.patches.grid = (int(224/16), int(224/16))
-    # net = ViT_seg(config_vit, img_size=224, num_classes=config_vit.n_classes).cuda()
-
-
 
     # 手动添加权重
     snapshot = r'epoch_100.pth'
