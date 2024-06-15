@@ -71,19 +71,7 @@ if __name__ == "__main__":
         'SBVPI' : {'root_path': '/sdata/yixin.zhang/program/dataset/SBVPI/train/image/',
                     'val_path': '/sdata/yixin.zhang/program/dataset/SBVPI/test/image/',
                     'img_size': [160,288]  
-                    },
-        'MMU' : {'root_path': '/sdata/yixin.zhang/program/dataset/MMU/train/image/',
-                    'val_path': '/sdata/yixin.zhang/program/dataset/MMU/test/image/',
-                    'img_size': [160,288]  
-                    },                    
-        'Miche' : {'root_path': '/sdata/yixin.zhang/program/dataset/Miche/train/image/',
-                   'val_path': '/sdata/yixin.zhang/program/dataset/Miche/test/image/',
-                   'img_size': [224,224]
-                  },
-        'I-SOCIAL-DB' : {'root_path': '/sdata/yixin.zhang/program/dataset/I-SOCIAL-DB/train/image/',
-                         'val_path': '/sdata/yixin.zhang/program/dataset/I-SOCIAL-DB/test/image/',
-                         'img_size': [288,352]  
-                         }
+                    }
     }
 
     args.root_path = dataset_config[dataset_name]['root_path']
